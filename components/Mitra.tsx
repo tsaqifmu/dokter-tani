@@ -7,10 +7,26 @@ const Mitra = () => {
   return (
     <section className={`${styles.flexCenter} bg-slate-100 text-slate-800`}>
       <div
-        className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} flex h-full flex-row-reverse`}
+        className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} h-full md:flex md:space-x-10`}
       >
-        <div className="flex w-1/2 items-center">
-          <div className="flex w-full flex-wrap justify-end gap-4">
+        {/* PARAGRAPH */}
+        <div className="md:w-1/2">
+          <h3 className="text-base font-semibold text-green-500 lg:text-xl">
+            Mitra Kami
+          </h3>
+          <h1 className="text-3xl font-bold lg:text-5xl">
+            Kolaborasi untuk <br /> Pertanian Lebih Baik
+          </h1>
+          <p className={`${styles.paragraph} mt-2 lg:mt-5 lg:max-w-96`}>
+            Dokter Tani bekerja sama dengan berbagai organisasi, perusahaan, dan
+            institusi terkemuka untuk memberikan solusi pertanian terbaik bagi
+            Anda. Berikut adalah beberapa mitra terpercaya kami:
+          </p>
+        </div>
+
+        {/* LOGO */}
+        <div className="flex w-full items-center md:w-1/2 md:justify-end">
+          <div className="mt-10 flex max-w-[450px] flex-wrap justify-end gap-4 md:w-full md:max-w-none lg:mt-0">
             {mitra.map((item) => (
               <div
                 key={item.id}
@@ -21,22 +37,11 @@ const Mitra = () => {
                   alt={`Logo ${item.id}`}
                   width={300}
                   height={300}
-                  className="grayscale transition-all hover:grayscale-0"
+                  className="transition-all hover:grayscale-0 md:grayscale"
                 />
               </div>
             ))}
           </div>
-        </div>
-        <div className="w-1/2">
-          <h3 className="text-xl font-semibold text-green-500">Mitra Kami</h3>
-          <h1 className="text-5xl font-bold">
-            Kolaborasi untuk <br /> Pertanian Lebih Baik
-          </h1>
-          <p className={`${styles.paragraph} mt-5 max-w-96`}>
-            Dokter Tani bekerja sama dengan berbagai organisasi, perusahaan, dan
-            institusi terkemuka untuk memberikan solusi pertanian terbaik bagi
-            Anda. Berikut adalah beberapa mitra terpercaya kami:
-          </p>
         </div>
       </div>
     </section>

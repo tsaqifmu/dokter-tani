@@ -6,7 +6,7 @@ export const styles = {
   boxWidthNavFoot: "xl:max-w-[1280px] w-full h-full",
 
   heading1: "font-bold text-2xl xl:text-[42px] xl:leading-[110%]",
-  paragraph: "text-base font-normal xl:text-lg ",
+  paragraph: "text-sm font-normal xl:text-lg ",
 
   flexCenter: "flex justify-center items-center ",
   flexStart: "flex justify-center items-start",
