@@ -1,76 +1,95 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 import { navLinks } from "@/constant";
 import { styles } from "@/constant/style";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { ButtonKonsultasi } from "@/components/ButtonKonsultasi";
+
+const NavItem = ({
+  href,
+  label,
+  isMobile,
+}: {
+  href: string;
+  label: string;
+  isMobile: boolean;
+}) => (
+  <li
+    className={`${styles.navLink} ${isMobile ? styles.navLinkMobile : styles.navLinkDesktop}`}
+  >
+    <Link href={href}>{label}</Link>
+  </li>
+);
+
+const Logo = () => (
+  <Link href="/">
+    <Image
+      className="w-[150px] xl:w-[212px]"
+      src="/Logo Dokter Tani.png"
+      width={212}
+      height={50}
+      alt="logo dokter tani"
+    />
+  </Link>
+);
 
 const NavBar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-center bg-white shadow-xl">
+    <header
+      className={`${styles.flexCenter} fixed z-50 w-full bg-white shadow-xl`}
+    >
       <div
         className={`${styles.boxWidthNavFoot} ${styles.paddingX} flex w-full items-center justify-between py-3`}
       >
-        <Link href="/">
-          <img
-            className="w-[150px] xl:w-[212px]"
-            src={"/Logo Dokter Tani.png"}
-            alt="logo"
-          />
-        </Link>
+        <Logo />
 
         {/* FOR MOBILE */}
-        <div className="flex flex-1 items-center justify-end lg:hidden">
+        <div className={`${styles.flexJustifyEnd} lg:hidden`}>
           <Image
-            src={toggle ? "/close.svg" : "/menu.svg"}
+            src={toggleMenu ? "/close.svg" : "/menu.svg"}
             width={28}
             height={28}
             alt="menu"
-            className="h-[28px] w-[28px] object-contain"
-            onClick={() => setToggle((prev) => !prev)}
+            className="object-contain"
+            onClick={() => setToggleMenu((prev) => !prev)}
           />
 
           <nav
-            className={`${
-              toggle ? `flex` : `hidden`
-            } min-w[140px] sidebar absolute right-0 top-20 z-50 mx-4 my-2 flex-col rounded-xl bg-white p-6 shadow-2xl`}
+            className={`${toggleMenu ? `flex` : `hidden`} ${styles.mobileMenu}`}
           >
-            <ul className="flex flex-1 list-none flex-col items-center justify-end">
-              {navLinks.map((nav, index) => (
-                <li
+            <ul className={`${styles.flexJustifyEnd} list-none flex-col`}>
+              {navLinks.map((nav) => (
+                <NavItem
+                  href={nav.id}
+                  label={nav.title}
                   key={nav.id}
-                  className={`cursor-pointer text-[16px] font-medium text-slate-800 ${
-                    index === navLinks.length - 1 ? `mr-0` : `mb-4`
-                  }`}
-                >
-                  <Link href={`${nav.id}`}>{nav.title}</Link>
-                </li>
+                  isMobile={true}
+                />
               ))}
             </ul>
             <div className="mt-4 hover:translate-y-2">
-              {/* <ButtonBelajar about={about} /> */}
+              <ButtonKonsultasi />
             </div>
           </nav>
         </div>
         {/* FOR DESKTOP */}
-        <nav className="hidden items-center justify-between lg:flex lg:gap-16">
-          <ul className="flex flex-1 list-none items-center justify-end">
-            {navLinks.map((nav, index) => (
-              <li
+        <nav className="hidden lg:flex lg:gap-16">
+          <ul className={`${styles.flexJustifyEnd} list-none`}>
+            {navLinks.map((nav) => (
+              <NavItem
+                href={nav.id}
+                label={nav.title}
                 key={nav.id}
-                className={`hover:text-greenWA cursor-pointer text-base font-medium text-slate-800 transition-all xl:text-lg ${
-                  index === navLinks.length - 1 ? `mr-0` : `mr-[30px]`
-                }`}
-              >
-                <Link href={`${nav.id}`}>{nav.title}</Link>
-              </li>
+                isMobile={false}
+              />
             ))}
           </ul>
           <div className="hidden transition-all hover:-translate-y-1 lg:flex">
-            {/* <ButtonBelajar about={about} /> */}
+            <ButtonKonsultasi />
           </div>
         </nav>
       </div>

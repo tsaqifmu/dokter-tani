@@ -1,0 +1,34 @@
+import { styles } from "@/constant/style";
+import Image from "next/image";
+import React from "react";
+import { ButtonKonsultasi } from "./ButtonKonsultasi";
+
+const Hero = () => {
+  return (
+    <section className={`${styles.flexCenter} relative pt-[65px]`}>
+      <div
+        className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/4 flex-col gap-1 text-white lg:gap-4 xl:max-w-[1280px]`}
+      >
+        <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
+          Selamat Datang di <br />
+          Dokter Tani
+        </h1>
+        <h3 className="text-base font-normal md:text-lg lg:text-2xl">
+          Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
+        </h3>
+        <div className="transition-all hover:-translate-y-1">
+          <ButtonKonsultasi />
+        </div>
+      </div>
+      <Image
+        src={"/Hero.png"}
+        alt="Selamat datang di dokter tani"
+        width={1920}
+        height={1080}
+        className="h-[600px] object-cover object-right lg:h-[700px] lg:w-full"
+      />
+    </section>
+  );
+};
+
+export default Hero;
