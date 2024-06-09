@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dokter Tani",
-  description: "Solusi untuk pertanian Indonesia",
+  description:
+    "Klinik pertanian yang menyediakan layanan konsultasi, diagnosis, dan resep obat untuk meningkatkan kesehatan dan produktivitas tanaman Anda",
 };
 
 export default function RootLayout({
