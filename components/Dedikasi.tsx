@@ -2,6 +2,7 @@ import { styles } from "@/constant/style";
 import Image from "next/image";
 import React from "react";
 import { ButtonKonsultasi } from "./ButtonKonsultasi";
+import { doktanKotakPutih } from "@/public/logo";
 
 const Dedikasi = () => {
   return (
@@ -33,7 +34,7 @@ const Dedikasi = () => {
               className="absolute bottom-3/4 right-16 h-20 translate-y-1/2"
             />
             <Image
-              src={"/doktertanikotak.png"}
+              src={doktanKotakPutih}
               width={120}
               height={120}
               alt="dokter tani"
