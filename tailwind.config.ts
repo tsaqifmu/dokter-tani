@@ -16,6 +16,7 @@ const config: Config = {
       },
       colors: {
         orangeDokTan: "#F27025",
+        greenDokTan: "#2E5F4C",
       },
     },
   },
