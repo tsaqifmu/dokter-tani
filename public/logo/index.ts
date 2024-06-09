@@ -3,7 +3,7 @@ import itb from "./itb.png";
 import kementan from "./kementan.png";
 import ugm from "./ugm.png";
 import logoDoktanFooter from "./logoDoktanFooter.png";
-import logoDoktanNavbar from "./logoDoktanNavbar.png";
+import logoDokTanNavbar from "./logoDokTanNavbar.png";
 import doktanKotakPutih from "./doktanKotakPutih.png";
 
 export {
@@ -12,6 +12,6 @@ export {
   kementan,
   ugm,
   logoDoktanFooter,
-  logoDoktanNavbar,
+  logoDokTanNavbar,
   doktanKotakPutih,
 };
