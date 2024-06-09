@@ -1,6 +1,6 @@
 import { navLinks, socialMedia } from "@/constant";
 import { styles } from "@/constant/style";
-import { logoDoktanFooter } from "@/public/logo";
+import { logoDokTanFooter } from "@/public/logo";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="w-40 space-y-8 xl:w-96">
             <div>
               <Image
-                src={logoDoktanFooter}
+                src={logoDokTanFooter}
                 width={300}
                 height={300}
                 alt="logo dokter tani"

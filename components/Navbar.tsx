@@ -6,7 +6,7 @@ import { useState } from "react";
 import { navLinks } from "@/constant";
 import { styles } from "@/constant/style";
 import { ButtonKonsultasi } from "@/components/ButtonKonsultasi";
-import { logoDoktanNavbar } from "@/public/logo";
+import { logoDokTanNavbar } from "@/public/logo";
 
 const NavItem = ({
   href,
@@ -28,7 +28,7 @@ const Logo = () => (
   <Link href="/">
     <Image
       className="w-[150px] xl:w-[212px]"
-      src={logoDoktanNavbar}
+      src={logoDokTanNavbar}
       width={212}
       height={50}
       alt="logo dokter tani"
