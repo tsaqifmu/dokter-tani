@@ -48,10 +48,10 @@ const Layanan = () => {
                 >
                   <Image
                     src={item.image}
-                    height={200}
-                    width={200}
+                    height={500}
+                    width={500}
                     alt={item.title}
-                    className="h-[200px] w-full rounded-md bg-red-400 object-cover"
+                    className="h-[200px] w-full rounded-md object-cover"
                   />
                   <h2 className={`${styles.heading2}`}>{item.title}</h2>
                   <p className={`${styles.paragraph}`}>{item.description}</p>

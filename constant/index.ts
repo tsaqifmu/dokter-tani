@@ -24,18 +24,18 @@ export const mitra = [
     id: "cbi",
     image: cbi,
   },
-  {
-    id: "ugm",
-    image: ugm,
-  },
-  {
-    id: "itb",
-    image: itb,
-  },
-  {
-    id: "kementan",
-    image: kementan,
-  },
+  // {
+  //   id: "ugm",
+  //   image: ugm,
+  // },
+  // {
+  //   id: "itb",
+  //   image: itb,
+  // },
+  // {
+  //   id: "kementan",
+  //   image: kementan,
+  // },
 ];
 export const layanan = [
   {
@@ -43,21 +43,21 @@ export const layanan = [
     title: "Layanan Konsultasi",
     description:
       "Dapatkan saran langsung dari ahli pertanian kami untuk menangani berbagai masalah tanaman Anda. Solusi tepat untuk hasil optimal.",
-    image: "/konsultasipertanian.jpg",
+    image: "/konsultasi.JPG",
   },
   {
     id: "2",
     title: "Diagnosis Tanaman",
     description:
       "Identifikasi penyakit dan hama yang menyerang tanaman Anda dengan cepat dan akurat. Temukan penyebab dan cara penanganannya.",
-    image: "/diagnosis tanaman.jpg",
+    image: "/diagnosis.JPG",
   },
   {
     id: "3",
     title: "Resep Obat",
     description:
       "Terima resep obat khusus dari dokter pertanian kami untuk mengatasi masalah tanaman Anda secara efektif dan efisien.",
-    image: "/resepobat.jpeg",
+    image: "/resep.JPG",
   },
 ];
 

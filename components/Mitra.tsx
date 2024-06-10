@@ -18,9 +18,10 @@ const Mitra = () => {
             Kolaborasi untuk <br /> Pertanian Lebih Baik
           </h1>
           <p className={`${styles.paragraph} mt-2 lg:mt-5 lg:max-w-96`}>
-            Dokter Tani bekerja sama dengan berbagai organisasi, perusahaan, dan
-            institusi terkemuka untuk memberikan solusi pertanian terbaik bagi
-            Anda. Berikut adalah beberapa mitra terpercaya kami:
+            Dokter Tani bekerja sama dengan Centra Biotech Indonesia, sebuah
+            perusahaan terkemuka, untuk memberikan solusi pertanian terbaik dan
+            inovatif bagi Anda, memastikan tanaman Anda tumbuh sehat dan
+            produktif.
           </p>
         </div>
 
@@ -35,9 +36,9 @@ const Mitra = () => {
                 <Image
                   src={item.image}
                   alt={`Logo ${item.id}`}
-                  width={300}
-                  height={300}
-                  className="transition-all hover:grayscale-0 lg:grayscale"
+                  width={500}
+                  height={500}
+                  className="transition-all hover:grayscale-0 lg:w-full lg:grayscale"
                 />
               </div>
             ))}

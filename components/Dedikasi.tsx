@@ -24,7 +24,7 @@ const Dedikasi = () => {
               width={500}
               height={500}
               alt="dedikasi kecil"
-              className="absolute -bottom-32 right-0 h-[200px] w-[250px] rounded-xl border-[12px] border-slate-100 object-cover lg:bottom-5 lg:right-0"
+              className="absolute -bottom-32 right-0 h-[250px] w-[250px] rounded-xl border-[12px] border-slate-100 object-cover lg:bottom-20 lg:right-0"
             />
             <Image
               src={"/sayur.svg"}
