@@ -39,7 +39,7 @@ const Mitra = () => {
                   alt={`Logo ${item.id}`}
                   width={300}
                   height={300}
-                  className="transition-all hover:grayscale-0 md:grayscale"
+                  className="transition-all hover:grayscale-0 lg:grayscale"
                 />
               </div>
             ))}

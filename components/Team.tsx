@@ -8,33 +8,37 @@ const Team = () => {
     <section
       className={`${styles.flexCenter} w-full bg-slate-100 pb-48 text-slate-800`}
     >
-      <div className={`${styles.paddingY} relative flex w-full justify-center`}>
-        <div className="absolute bottom-1/2 left-1/2 mr-14 -translate-x-1/2 translate-y-1/2">
-          <div className="ml-12 -translate-x-full text-white">
-            <h3 className="text-xl font-semibold tracking-widest text-green-300">
-              Mitra Terpercaya Kami
-            </h3>
-            <h3 className="text-4xl font-bold">
-              Kami Memiliki Tim Ahli <br /> yang Siap Membantu
-            </h3>
+      <div
+        className={`${styles.paddingY} relative w-full justify-center lg:flex`}
+      >
+        <div className="relative h-full">
+          <div className="absolute bottom-1/2 mr-14 translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2">
+            <div className="px-4 text-white md:px-14 lg:ml-12 lg:-translate-x-full">
+              <h3 className="text-base font-semibold tracking-widest text-green-300 lg:text-xl">
+                Mitra Terpercaya Kami
+              </h3>
+              <h3 className="text-3xl font-bold lg:text-4xl">
+                Kami Memiliki Tim Ahli <br /> yang Siap Membantu
+              </h3>
+            </div>
           </div>
+          <Image
+            src={"/team.png"}
+            width={1920}
+            height={1080}
+            alt="tim dokter tani"
+            className="h-[400px] w-full object-cover lg:h-[600px]"
+          />
         </div>
-        <Image
-          src={"/team.png"}
-          width={1920}
-          height={1080}
-          alt="tim dokter tani"
-          className="h-[600px] w-full object-cover"
-        />
         {/* card */}
         <div
-          className={` ${styles.paddingX} absolute -bottom-[50px] left-1/2 w-full -translate-x-1/2 xl:max-w-[1280px]`}
+          className={` ${styles.paddingX} mt-5 w-full md:absolute md:-bottom-[150px] md:left-1/2 md:mt-0 md:-translate-x-1/2 lg:-bottom-[50px] xl:max-w-[1280px]`}
         >
-          <div className="flex w-full justify-between space-x-4">
+          <div className="w-full justify-between space-y-5 md:flex md:space-x-4 md:space-y-0">
             {team.map((item) => (
               <div
                 key={item.id}
-                className="flex w-[350px] flex-col items-center justify-center space-y-2 rounded-md bg-white px-3 py-3 shadow-2xl"
+                className="flex flex-col items-center justify-center rounded-md bg-white px-3 py-3 shadow-2xl lg:w-[350px] lg:space-y-2"
               >
                 <Image
                   src={item.image}
