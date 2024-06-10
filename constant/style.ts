@@ -27,7 +27,7 @@ export const styles = {
   //! Nav Styles
   navLink: "cursor-pointer text-[16px] font-medium text-slate-800",
   navLinkDesktop:
-    "hover:text-greenWA text-base transition-all xl:text-lg mr-[30px]",
+    "hover:text-orangeDokTan  text-base transition-all xl:text-lg mr-[30px]",
   navLinkMobile: "mb-4",
   mobileMenu:
     "min-w-[140px] sidebar absolute right-0 top-20 z-50 mx-4 my-2 flex-col rounded-xl bg-white p-6 shadow-2xl",

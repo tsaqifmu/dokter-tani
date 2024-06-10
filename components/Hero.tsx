@@ -5,7 +5,7 @@ import { ButtonKonsultasi } from "./ButtonKonsultasi";
 
 const Hero = () => {
   return (
-    <section className={`${styles.flexCenter} relative pt-[65px]`}>
+    <section id="beranda" className={`${styles.flexCenter} relative pt-[65px]`}>
       <div
         className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
       >

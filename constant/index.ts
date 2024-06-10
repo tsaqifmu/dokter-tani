@@ -3,20 +3,20 @@ import { instagram, map, walist, youtube } from "@/public/socialMediaIcon";
 
 export const navLinks = [
   {
-    id: "/",
+    id: "beranda",
     title: "Beranda",
   },
   {
-    id: "/program",
-    title: "Program",
+    id: "mitra",
+    title: "Mitra",
   },
   {
-    id: "/blog",
-    title: "Blog",
+    id: "layanan",
+    title: "Layanan",
   },
   {
-    id: "/about",
-    title: "Tentang",
+    id: "tim",
+    title: "Tim",
   },
 ];
 export const mitra = [

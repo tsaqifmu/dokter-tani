@@ -5,7 +5,7 @@ import React from "react";
 
 const Layanan = () => {
   return (
-    <section className={`${styles.flexCenter} w-full`}>
+    <section id="layanan" className={`${styles.flexCenter} w-full`}>
       <div className={`w-full pt-20 lg:pb-72`}>
         <div className="relative w-full lg:flex">
           <div className="relative lg:w-1/2">

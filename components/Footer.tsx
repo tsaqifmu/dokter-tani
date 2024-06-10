@@ -63,7 +63,7 @@ const Footer = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className="cursor-pointer text-[16px] text-sm font-normal text-white transition-all hover:font-semibold md:text-base"
+                  className="cursor-pointer text-[16px] text-sm font-normal text-white transition-all hover:font-semibold hover:text-orangeDokTan md:text-base"
                 >
                   <Link href={`#${nav.id}`}>{nav.title}</Link>
                 </li>

@@ -18,9 +18,9 @@ const NavItem = ({
   isMobile: boolean;
 }) => (
   <li
-    className={`${styles.navLink} ${isMobile ? styles.navLinkMobile : styles.navLinkDesktop}`}
+    className={`${styles.navLink}  ${isMobile ? styles.navLinkMobile : styles.navLinkDesktop}`}
   >
-    <Link href={href}>{label}</Link>
+    <Link href={`/#${href}`}>{label}</Link>
   </li>
 );
 

@@ -5,7 +5,7 @@ import React from "react";
 
 const Mitra = () => {
   return (
-    <section className={`${styles.flexCenter} `}>
+    <section id="mitra" className={`${styles.flexCenter} `}>
       <div
         className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} h-full md:flex md:space-x-10`}
       >
