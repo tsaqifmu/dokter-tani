@@ -5,7 +5,7 @@ import React from "react";
 
 const Mitra = () => {
   return (
-    <section className={`${styles.flexCenter} bg-slate-100 text-slate-800`}>
+    <section className={`${styles.flexCenter} `}>
       <div
         className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} h-full md:flex md:space-x-10`}
       >
@@ -17,9 +17,7 @@ const Mitra = () => {
           <h1 className="text-3xl font-bold lg:text-5xl">
             Kolaborasi untuk <br /> Pertanian Lebih Baik
           </h1>
-          <p
-            className={`${styles.paragraph} mt-2 text-slate-500 lg:mt-5 lg:max-w-96`}
-          >
+          <p className={`${styles.paragraph} mt-2 lg:mt-5 lg:max-w-96`}>
             Dokter Tani bekerja sama dengan berbagai organisasi, perusahaan, dan
             institusi terkemuka untuk memberikan solusi pertanian terbaik bagi
             Anda. Berikut adalah beberapa mitra terpercaya kami:

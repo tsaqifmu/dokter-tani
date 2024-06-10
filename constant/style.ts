@@ -1,12 +1,16 @@
 //! dont forget to change tailwind.config.js file
 
+import { list } from "postcss";
+
 export const styles = {
   //! General Styles
   boxWidth: "3xl:max-w-[1280px] w-full",
   boxWidthNavFoot: "xl:max-w-[1280px] w-full h-full",
 
-  heading1: "font-bold text-2xl xl:text-[42px] xl:leading-[110%]",
-  paragraph: "text-sm font-normal xl:text-lg ",
+  heading1: "font-bold text-3xl  md:text-4xl xl:text-5xl xl:leading-[110%]",
+  heading2: "text-xl font-bold lg:text-2xl",
+  paragraph: "text-sm text-slate-500 lg:text-base ",
+  list: "list-inside list-disc text-sm font-semibold md:text-base lg:text-lg",
 
   flexCenter: "flex justify-center items-center ",
   flexStart: "flex justify-center items-start",

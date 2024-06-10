@@ -16,7 +16,9 @@ const Hero = () => {
         <h3 className="text-base font-normal md:text-lg lg:text-2xl">
           Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
         </h3>
-        <p className="w-2/3 text-sm text-slate-300 sm:w-1/2 md:w-96">
+        <p
+          className={`${styles.paragraph} w-2/3 text-slate-200 sm:w-1/2 md:w-96`}
+        >
           Klinik pertanian yang menyediakan layanan konsultasi, diagnosis, dan
           resep obat untuk meningkatkan kesehatan dan produktivitas tanaman
           Anda.

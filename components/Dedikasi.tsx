@@ -6,7 +6,7 @@ import { doktanKotakPutih } from "@/public/logo";
 
 const Dedikasi = () => {
   return (
-    <section className={`${styles.flexCenter} text-slate-800`}>
+    <section className={`${styles.flexCenter} `}>
       <div
         className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} lg:flex lg:justify-between`}
       >
@@ -43,10 +43,10 @@ const Dedikasi = () => {
           </div>
         </div>
         <div className="mt-36 space-y-5 lg:mt-0 lg:w-1/2 lg:pl-10">
-          <h1 className="text-xl font-bold lg:text-4xl">
+          <h1 className={`${styles.heading1}`}>
             Dedikasi dalam Mendukung Pertanian yang Sehat dan Berkelanjutan
           </h1>
-          <p className="text-sm text-slate-500 lg:text-base">
+          <p className={`${styles.paragraph}`}>
             Dengan layanan konsultasi, diagnosis, dan resep obat dari para ahli,
             kami berkomitmen untuk memastikan tanaman Anda tumbuh dengan optimal
             dan bebas dari penyakit. Kami hadir untuk membantu petani mencapai
@@ -54,20 +54,18 @@ const Dedikasi = () => {
           </p>
           <ul className="space-y-3">
             <div>
-              <li className="list-inside list-disc text-sm font-semibold lg:text-base">
+              <li className={`${styles.list}`}>
                 Pendekatan Terpadu dan Berkelanjutan
               </li>
-              <p className="ml-5 text-sm text-slate-500 lg:text-base">
+              <p className={`${styles.paragraph} ml-5`}>
                 Kami menerapkan metode pertanian yang ramah lingkungan dan
                 berkelanjutan untuk memastikan kelangsungan pertanian di masa
                 depan.
               </p>
             </div>
             <div>
-              <li className="list-inside list-disc text-sm font-semibold lg:text-base">
-                Edukasi dan Pelatihan Petani
-              </li>
-              <p className="ml-5 text-sm text-slate-500 lg:text-base">
+              <li className={`${styles.list}`}>Edukasi dan Pelatihan Petani</li>
+              <p className={`${styles.paragraph} ml-5`}>
                 Kami menyediakan pelatihan dan edukasi bagi petani untuk
                 meningkatkan pengetahuan dan keterampilan mereka dalam mengelola
                 pertanian secara efektif.

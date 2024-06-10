@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main>
+      <main className="bg-slate-100 text-slate-800">
         <Hero />
         <Mitra />
         <Layanan />

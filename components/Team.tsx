@@ -5,9 +5,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <section
-      className={`${styles.flexCenter} w-full bg-slate-100 pb-48 text-slate-800`}
-    >
+    <section className={`${styles.flexCenter} w-full pb-48`}>
       <div
         className={`${styles.paddingY} relative w-full justify-center lg:flex`}
       >

@@ -5,16 +5,14 @@ import React from "react";
 
 const Layanan = () => {
   return (
-    <section
-      className={`${styles.flexCenter} w-full bg-slate-100 text-slate-800`}
-    >
+    <section className={`${styles.flexCenter} w-full`}>
       <div className={`w-full pt-20 lg:pb-72`}>
         <div className="relative w-full lg:flex">
           <div className="relative lg:w-1/2">
             <div className="absolute top-16 space-y-4 px-4 md:px-14 lg:right-20">
-              <h3 className="text-3xl font-bold text-white md:text-4xl xl:text-5xl">
+              <h1 className={`${styles.heading1} text-white`}>
                 Layanan Pertanian <br /> Berkualitas dari <br /> Dokter Tani
-              </h3>
+              </h1>
               <p className="max-w-[400px] text-white lg:hidden">
                 Meningkatkan produktivitas dan kesehatan tanaman Anda melalui
                 solusi pertanian yang berkelanjutan dan inovatif bersama Dokter
@@ -30,7 +28,9 @@ const Layanan = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <p className="ml-24 mt-20 hidden max-w-[300px] text-slate-500 lg:block lg:max-w-[400px]">
+            <p
+              className={` ${styles.paragraph} ml-24 mt-20 hidden max-w-[300px] lg:block lg:max-w-[400px]`}
+            >
               Meningkatkan produktivitas dan kesehatan tanaman Anda melalui
               solusi pertanian yang berkelanjutan dan inovatif bersama Dokter
               Tani, mitra terpercaya Anda.
@@ -53,10 +53,8 @@ const Layanan = () => {
                     alt={item.title}
                     className="h-[200px] w-full rounded-md bg-red-400 object-cover"
                   />
-                  <h3 className="text-xl font-bold lg:text-3xl">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm lg:text-base">{item.description}</p>
+                  <h2 className={`${styles.heading2}`}>{item.title}</h2>
+                  <p className={`${styles.paragraph}`}>{item.description}</p>
                 </div>
               ))}
             </div>
