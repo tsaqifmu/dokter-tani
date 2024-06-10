@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className={`${styles.flexCenter} relative pt-[65px]`}>
       <div
-        className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 text-white lg:gap-4 xl:max-w-[1280px]`}
+        className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
       >
         <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
           Selamat Datang di <br />
@@ -17,7 +17,7 @@ const Hero = () => {
           Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
         </h3>
         <p
-          className={`${styles.paragraph} w-2/3 text-slate-200 sm:w-1/2 md:w-96`}
+          className={`w-2/3 text-sm text-slate-200 sm:w-1/2 md:w-96 lg:text-base`}
         >
           Klinik pertanian yang menyediakan layanan konsultasi, diagnosis, dan
           resep obat untuk meningkatkan kesehatan dan produktivitas tanaman
@@ -32,7 +32,7 @@ const Hero = () => {
         alt="Selamat datang di dokter tani"
         width={1920}
         height={1080}
-        className="h-[600px] object-cover object-right lg:h-[700px] lg:w-full"
+        className="h-[600px] object-cover object-right brightness-50 md:brightness-100 lg:h-[700px] lg:w-full"
       />
     </section>
   );
