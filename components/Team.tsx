@@ -9,16 +9,14 @@ const Team = () => {
       <div
         className={`${styles.paddingY} relative w-full justify-center lg:flex`}
       >
-        <div className="relative h-full">
-          <div className="absolute bottom-1/2 mr-14 translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2">
-            <div className="px-4 text-white md:px-14 lg:ml-12 lg:-translate-x-full">
-              <h3 className="text-base font-semibold tracking-widest text-green-300 lg:text-xl">
-                Mitra Terpercaya Kami
-              </h3>
-              <h3 className="text-3xl font-bold lg:text-4xl">
-                Kami Memiliki Tim Ahli <br /> yang Siap Membantu
-              </h3>
-            </div>
+        <div className="relative w-full">
+          <div className="absolute bottom-1/2 mr-14 w-full translate-y-1/2 px-4 md:px-14 lg:left-1/2 lg:-translate-x-1/2 xl:max-w-[1280px]">
+            <h3 className="text-base font-semibold tracking-widest text-green-500 lg:text-xl">
+              Mitra Terpercaya Kami
+            </h3>
+            <h3 className={`${styles.heading1} text-white`}>
+              Kami Memiliki Tim Ahli <br /> yang Siap Membantu
+            </h3>
           </div>
           <Image
             src={"/team.png"}
@@ -36,7 +34,7 @@ const Team = () => {
             {team.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col items-center justify-center rounded-md bg-white px-3 py-3 shadow-2xl lg:w-[350px] lg:space-y-2"
+                className="flex flex-col items-center justify-center rounded-md bg-white px-3 py-3 shadow-xl transition-all hover:shadow-2xl lg:w-[350px] lg:space-y-2"
               >
                 <Image
                   src={item.image}
