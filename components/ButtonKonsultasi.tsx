@@ -4,7 +4,7 @@ import Link from "next/link";
 export const ButtonKonsultasi = () => (
   <Link
     href={
-      "https://api.whatsapp.com/send?phone=6283134954396&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi"
+      "https://api.whatsapp.com/send?phone=6281235003655&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi"
     }
     target="_blank"
   >
