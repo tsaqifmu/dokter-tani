@@ -25,6 +25,11 @@ export const navLinks = [
     link: "/tentang",
   },
   {
+    id: "hubungi",
+    title: "Hubungi",
+    link: "/hubungi-kami",
+  },
+  {
     id: "tim",
     title: "Tim",
   },
