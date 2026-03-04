@@ -107,6 +107,6 @@ export const socialMedia = [
   {
     id: "walist",
     icon: walist,
-    link: "https://api.whatsapp.com/send?phone=6283134954396&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi",
+    link: "https://api.whatsapp.com/send?phone=6285122093761&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi",
   },
 ];
