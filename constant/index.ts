@@ -20,6 +20,11 @@ export const navLinks = [
     link: "/produk",
   },
   {
+    id: "tentang",
+    title: "Tentang",
+    link: "/tentang",
+  },
+  {
     id: "tim",
     title: "Tim",
   },
