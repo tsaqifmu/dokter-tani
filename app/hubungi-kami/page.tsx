@@ -192,7 +192,7 @@ function FormAndMapSection() {
             segera merespon pesan Anda.
           </p>
 
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-5">
             <input
               type="text"
               placeholder="Nama Anda"
