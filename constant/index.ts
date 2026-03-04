@@ -15,6 +15,11 @@ export const navLinks = [
     title: "Layanan",
   },
   {
+    id: "produk",
+    title: "Produk",
+    link: "/produk",
+  },
+  {
     id: "tim",
     title: "Tim",
   },

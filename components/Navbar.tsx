@@ -11,16 +11,18 @@ import { logoDokTanNavbar } from "@/public/logo";
 const NavItem = ({
   href,
   label,
+  link,
   isMobile,
 }: {
   href: string;
   label: string;
+  link?: string;
   isMobile: boolean;
 }) => (
   <li
     className={`${styles.navLink}  ${isMobile ? styles.navLinkMobile : styles.navLinkDesktop}`}
   >
-    <Link href={`/#${href}`}>{label}</Link>
+    <Link href={link || `/#${href}`}>{label}</Link>
   </li>
 );
 
@@ -67,6 +69,7 @@ const NavBar = () => {
                 <NavItem
                   href={nav.id}
                   label={nav.title}
+                  link={(nav as any).link}
                   key={nav.id}
                   isMobile={true}
                 />
@@ -84,6 +87,7 @@ const NavBar = () => {
               <NavItem
                 href={nav.id}
                 label={nav.title}
+                link={(nav as any).link}
                 key={nav.id}
                 isMobile={false}
               />
