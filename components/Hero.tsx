@@ -7,7 +7,7 @@ import { ButtonKonsultasi } from "./ButtonKonsultasi";
 const HeroContent = () => {
   return (
     <div
-      className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
+      className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0`}
     >
       <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
         Selamat Datang di <br />

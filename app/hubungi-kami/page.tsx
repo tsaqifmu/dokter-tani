@@ -46,7 +46,7 @@ function HeroSection() {
       </div>
 
       <div
-        className={`${styles.paddingX} ${styles.flexCenter} relative z-20 mx-auto min-h-[400px] w-full max-w-[1280px] lg:min-h-[500px]`}
+        className={`${styles.paddingX} ${styles.flexCenter} relative z-20 mx-auto min-h-[400px] w-full lg:min-h-[500px]`}
       >
         <div className="flex w-full flex-col justify-center pb-24 md:pb-32 lg:w-1/2 lg:pb-0">
           <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
@@ -156,7 +156,7 @@ const contactInfo = [
 
 function CardsSection() {
   return (
-    <section className="relative z-30 mx-auto -mt-16 max-w-[1280px] px-4 md:-mt-24 md:px-14 lg:px-16 3xl:px-0">
+    <section className={`relative z-30 mx-auto -mt-16 ${styles.paddingX} md:-mt-24`}>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
         {contactInfo.map((info, i) => (
           <div
@@ -180,7 +180,7 @@ function CardsSection() {
 /* ─── Form & Map Section ──────────────────────────────────────── */
 function FormAndMapSection() {
   return (
-    <section className="mx-auto w-full max-w-[1280px] px-4 py-16 md:px-14 lg:px-16 lg:py-24 3xl:px-0">
+    <section className={`mx-auto w-full ${styles.paddingX} py-16 lg:py-24`}>
       <div className="flex flex-col gap-16 lg:flex-row lg:gap-12">
         {/* Form Container */}
         <div className="flex-1">
@@ -290,7 +290,7 @@ const bottomFeatures = [
 function OperationalAndFeatures() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1280px] px-4 pt-4 md:px-14 lg:px-16 3xl:px-0">
+      <section className={`mx-auto w-full ${styles.paddingX} pt-4`}>
         <h2 className="mb-4 text-2xl font-bold text-[#224A37]">
           Jam Operasional Kami
         </h2>
@@ -314,7 +314,7 @@ function OperationalAndFeatures() {
       {/* Bottom Features section with dark green background */}
       <section className="bg-greenDokTan relative pb-20 pt-4 px-4 w-full">
          <div className="absolute inset-0 bg-[url('/tentang-hero-bg.png')] opacity-10 object-cover opacity-5 mix-blend-overlay"></div>
-         <div className="relative z-10 mx-auto max-w-[1280px]">
+         <div className={`relative z-10 ${styles.paddingX}`}>
             <div className="grid grid-cols-2 gap-4 gap-y-12 sm:grid-cols-4 md:gap-6 mt-6">
                 {bottomFeatures.map((feat, i) => (
                     <div key={i} className="flex flex-col items-center">

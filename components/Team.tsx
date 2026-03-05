@@ -6,7 +6,7 @@ import React from "react";
 // Component for the main heading and subheading
 const TeamHeading = () => {
   return (
-    <div className="absolute bottom-1/2 mr-14 w-full translate-y-1/2 px-4 md:px-14 lg:left-1/2 lg:-translate-x-1/2 xl:max-w-[1280px]">
+    <div className="absolute bottom-1/2 mr-14 w-full translate-y-1/2 px-4 md:px-14 lg:left-1/2 lg:-translate-x-1/2 lg:px-16 2xl:px-24">
       <h3 className="text-base font-semibold tracking-widest text-green-500 lg:text-xl">
         Mitra Terpercaya Kami
       </h3>
@@ -21,7 +21,7 @@ const TeamHeading = () => {
 const TeamCards = () => {
   return (
     <div
-      className={` ${styles.paddingX} mt-5 w-full md:absolute md:-bottom-[150px] md:left-1/2 md:mt-0 md:-translate-x-1/2 lg:-bottom-[50px] xl:max-w-[1280px]`}
+      className={` ${styles.paddingX} mt-5 w-full md:absolute md:-bottom-[150px] md:left-1/2 md:mt-0 md:-translate-x-1/2 lg:-bottom-[50px]`}
     >
       <div className="w-full justify-between space-y-5 md:flex md:space-x-4 md:space-y-0">
         {team.map((item) => (

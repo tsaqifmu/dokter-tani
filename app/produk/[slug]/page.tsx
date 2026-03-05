@@ -42,7 +42,7 @@ export default function ProductDetailPage({ params }: PageProps) {
         <section className={`${styles.flexCenter} relative pt-[74px]`}>
           {/* Text Content */}
           <div
-            className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
+            className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0`}
           >
             <nav className="flex flex-wrap items-center text-sm text-white/60">
               <a
