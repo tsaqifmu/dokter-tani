@@ -39,6 +39,7 @@ function HeroSection() {
             src="/hubungi-hero.png"
             alt="Customer Support"
             fill
+            sizes="100vw"
             className="object-cover object-center opacity-40 lg:opacity-100"
             priority
           />
@@ -229,6 +230,7 @@ function FormAndMapSection() {
               src="/hubungi-map.png"
               alt="Peta Lokasi"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
             
@@ -323,6 +325,7 @@ function OperationalAndFeatures() {
                                src={feat.img}
                                alt={feat.title}
                                fill
+                               sizes="(max-width: 640px) 96px, 128px"
                                className="object-cover"
                             />
                         </div>

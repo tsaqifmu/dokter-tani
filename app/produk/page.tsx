@@ -24,6 +24,7 @@ export default function ProdukPage() {
               src="/products-hero-bg.png"
               alt="Produk Dokter Tani"
               fill
+              sizes="100vw"
               className="object-cover object-center opacity-40 md:opacity-100"
               priority
             />

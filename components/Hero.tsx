@@ -12,6 +12,7 @@ const Hero = () => {
           src="/Hero.png"
           alt="Selamat datang di dokter tani"
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-40 md:opacity-100"
           priority
         />

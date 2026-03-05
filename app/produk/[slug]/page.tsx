@@ -46,6 +46,7 @@ export default function ProductDetailPage({ params }: PageProps) {
               src="/product-detail-bg.png"
               alt={product.name}
               fill
+              sizes="100vw"
               className="object-cover object-center opacity-40 md:opacity-100"
               priority
             />

@@ -21,6 +21,7 @@ function HeroSection() {
           src="/tentang-hero-bg.png"
           alt="Tentang Dokter Tani"
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-40 md:opacity-100"
           priority
         />
@@ -411,6 +412,7 @@ function CtaSection() {
           src="/tentang-hero-bg.png"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>
