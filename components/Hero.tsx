@@ -17,7 +17,7 @@ const Hero = () => {
         />
       </div>
       {/* Left-to-transparent gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1b3d2d] via-[#1b3d2d]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1b3d2d] from-[25%] via-[#1b3d2d]/60 via-[55%] to-transparent" />
 
       {/* Content */}
       <div className={`${styles.paddingX} relative z-10 flex min-h-[600px] items-center lg:min-h-[700px]`}>
