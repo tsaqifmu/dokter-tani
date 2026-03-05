@@ -17,32 +17,36 @@ export default function ProdukPage() {
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero Section */}
-        <section className={`${styles.flexCenter} relative pt-[74px]`}>
-          {/* Text Content */}
-          <div
-            className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0`}
-          >
-            <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
-              Produk{" "}
-              <span className="italic text-orangeDokTan">Kami</span>
-            </h1>
-            <h3 className="text-base font-normal md:text-lg lg:text-2xl">
-              Solusi Pertanian Organik <br /> Berkualitas Tinggi
-            </h3>
-            <p className="w-2/3 text-sm text-slate-200 sm:w-1/2 md:w-96 lg:text-base">
-              Solusi pertanian organik berkualitas tinggi untuk hasil panen yang
-              lebih baik dan pertanian yang berkelanjutan.
-            </p>
+        <section className="relative w-full overflow-hidden bg-[#1b3d2d] pt-[74px]">
+          {/* Background photo */}
+          <div className="absolute inset-0">
+            <Image
+              src="/products-hero-bg.png"
+              alt="Produk Dokter Tani"
+              fill
+              className="object-cover object-center opacity-40 md:opacity-100"
+              priority
+            />
           </div>
-          {/* Background Image */}
-          <Image
-            src="/products-hero-bg.png"
-            alt="Produk Dokter Tani"
-            width={1920}
-            height={1080}
-            className="h-[600px] object-cover object-right brightness-50 md:brightness-100 lg:h-[700px] lg:w-full"
-            priority
-          />
+          {/* Left-to-transparent gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b3d2d] via-[#1b3d2d]/80 to-transparent" />
+
+          {/* Content */}
+          <div className={`${styles.paddingX} relative z-10 flex min-h-[600px] items-center lg:min-h-[700px]`}>
+            <div className="flex max-w-[580px] flex-col gap-4 text-white">
+              <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
+                Produk{" "}
+                <span className="italic text-orangeDokTan">Kami</span>
+              </h1>
+              <h3 className="text-base font-normal md:text-lg lg:text-2xl">
+                Solusi Pertanian Organik <br /> Berkualitas Tinggi
+              </h3>
+              <p className="text-sm text-slate-200 md:max-w-sm lg:text-base">
+                Solusi pertanian organik berkualitas tinggi untuk hasil panen yang
+                lebih baik dan pertanian yang berkelanjutan.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Products Grid */}

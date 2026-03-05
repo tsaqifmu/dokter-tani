@@ -14,51 +14,55 @@ export const metadata = {
 /* ─── Hero Section ────────────────────────────────────────────── */
 function HeroSection() {
   return (
-    <section className={`${styles.flexCenter} relative pt-[74px]`}>
-      {/* Text Content */}
-      <div
-        className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0`}
-      >
-        <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
-          Tentang{" "}
-          <span className="italic text-orangeDokTan">Dokter Tani</span>
-        </h1>
-        <h3 className="text-base font-normal md:text-lg lg:text-2xl">
-          Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
-        </h3>
-        <p className="w-2/3 text-sm text-slate-200 sm:w-1/2 md:w-96 lg:text-base">
-          Menjaga kesehatan dan produktivitas tanaman Anda dengan layanan
-          konsultasi serta produk pertanian berkualitas dari Dokter Tani.
-        </p>
-        <div className="transition-all hover:-translate-y-1">
-          <Link
-            href="https://api.whatsapp.com/send?phone=6285122093761&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi"
-            target="_blank"
-          >
-            <button className="flex w-fit items-center gap-x-2 rounded-lg border-2 border-orangeDokTan bg-orangeDokTan px-5 py-2.5 shadow-lg transition-all hover:border-orange-400 hover:bg-orange-400">
-              <Image
-                src="/phone.svg"
-                height={20}
-                width={20}
-                alt="phone"
-                className="w-4 lg:w-5"
-              />
-              <span className="text-sm font-medium text-white lg:text-base">
-                Hubungi Kami
-              </span>
-            </button>
-          </Link>
+    <section className="relative w-full overflow-hidden bg-[#1b3d2d] pt-[74px]">
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <Image
+          src="/tentang-hero-bg.png"
+          alt="Tentang Dokter Tani"
+          fill
+          className="object-cover object-center opacity-40 md:opacity-100"
+          priority
+        />
+      </div>
+      {/* Left-to-transparent gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1b3d2d] via-[#1b3d2d]/80 to-transparent" />
+
+      {/* Content */}
+      <div className={`${styles.paddingX} relative z-10 flex min-h-[600px] items-center lg:min-h-[700px]`}>
+        <div className="flex max-w-[580px] flex-col gap-4 text-white">
+          <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
+            Tentang{" "}
+            <span className="italic text-orangeDokTan">Dokter Tani</span>
+          </h1>
+          <h3 className="text-base font-normal md:text-lg lg:text-2xl">
+            Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
+          </h3>
+          <p className="text-sm text-slate-200 md:max-w-sm lg:text-base">
+            Menjaga kesehatan dan produktivitas tanaman Anda dengan layanan
+            konsultasi serta produk pertanian berkualitas dari Dokter Tani.
+          </p>
+          <div className="transition-all hover:-translate-y-1">
+            <Link
+              href="https://api.whatsapp.com/send?phone=6285122093761&text=Halo%20admin%20Dokter%20Tani%2C%20saya%20ingin%20konsultasi"
+              target="_blank"
+            >
+              <button className="flex w-fit items-center gap-x-2 rounded-lg border-2 border-orangeDokTan bg-orangeDokTan px-5 py-2.5 shadow-lg transition-all hover:border-orange-400 hover:bg-orange-400">
+                <Image
+                  src="/phone.svg"
+                  height={20}
+                  width={20}
+                  alt="phone"
+                  className="w-4 lg:w-5"
+                />
+                <span className="text-sm font-medium text-white lg:text-base">
+                  Hubungi Kami
+                </span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-      {/* Background Image */}
-      <Image
-        src="/tentang-hero-bg.png"
-        alt="Tentang Dokter Tani"
-        width={1920}
-        height={1080}
-        className="h-[600px] object-cover object-right brightness-50 md:brightness-100 lg:h-[700px] lg:w-full"
-        priority
-      />
     </section>
   );
 }
