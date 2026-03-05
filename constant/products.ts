@@ -6,13 +6,19 @@ export interface ProductReview {
   comment: string;
 }
 
+export interface EcommerceLinks {
+  shopee?: string;
+  tokopedia?: string;
+  lazada?: string;
+  tiktokShop?: string;
+}
+
 export interface Product {
   id: string;
   slug: string;
   name: string;
   category: string;
   tags: string[];
-  price: number;
   stock: "Tersedia" | "Habis";
   unit: string;
   image: string;
@@ -24,6 +30,7 @@ export interface Product {
   };
   reviews: ProductReview[];
   relatedProductIds: string[];
+  ecommerceLinks: EcommerceLinks;
 }
 
 export const products: Product[] = [
@@ -33,7 +40,6 @@ export const products: Product[] = [
     name: "Pupuk Organik Cair",
     category: "Pupuk Organik",
     tags: ["Pupuk", "Organik", "Cair"],
-    price: 50000,
     stock: "Tersedia",
     unit: "1 Liter",
     image: "/products/pupuk-organik-cair.png",
@@ -80,6 +86,12 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: ["2", "3"],
+    ecommerceLinks: {
+      shopee: "#",
+      tokopedia: "#",
+      lazada: "#",
+      tiktokShop: "#",
+    },
   },
   {
     id: "2",
@@ -87,7 +99,6 @@ export const products: Product[] = [
     name: "Fungisidal Hayati",
     category: "Pestisida Organik",
     tags: ["Fungisida", "Hayati", "Organik"],
-    price: 65000,
     stock: "Tersedia",
     unit: "500 ml",
     image: "/products/fungisidal-hayati.png",
@@ -125,6 +136,12 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: ["1", "3"],
+    ecommerceLinks: {
+      shopee: "#",
+      tokopedia: "#",
+      lazada: "#",
+      tiktokShop: "#",
+    },
   },
   {
     id: "3",
@@ -132,7 +149,6 @@ export const products: Product[] = [
     name: "Pestisidal Hayati",
     category: "Pestisida Organik",
     tags: ["Pestisida", "Hayati", "Organik"],
-    price: 70000,
     stock: "Tersedia",
     unit: "500 ml",
     image: "/products/pestisidal-hayati.png",
@@ -178,6 +194,12 @@ export const products: Product[] = [
       },
     ],
     relatedProductIds: ["1", "2"],
+    ecommerceLinks: {
+      shopee: "#",
+      tokopedia: "#",
+      lazada: "#",
+      tiktokShop: "#",
+    },
   },
 ];
 
@@ -195,6 +217,3 @@ export function getRelatedProducts(product: Product): Product[] {
     .filter(Boolean) as Product[];
 }
 
-export function formatPrice(price: number): string {
-  return new Intl.NumberFormat("id-ID").format(price);
-}

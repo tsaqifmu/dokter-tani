@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product, formatPrice } from "@/constant/products";
+import { Product } from "@/constant/products";
 
 interface ProductCardProps {
   product: Product;
@@ -54,9 +54,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
               ({product.reviews.length})
             </span>
           </div>
-          <p className="text-xl font-bold text-orangeDokTan">
-            Rp {formatPrice(product.price)}
-          </p>
         </div>
       </div>
     </Link>

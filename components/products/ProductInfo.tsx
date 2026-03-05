@@ -1,28 +1,25 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
-import { Product, formatPrice } from "@/constant/products";
+import { Product } from "@/constant/products";
 
 interface ProductInfoProps {
   product: Product;
 }
 
-const ProductInfo = ({ product }: ProductInfoProps) => {
-  const [quantity, setQuantity] = useState(1);
+const marketplaces = [
+  { key: "shopee" as const, label: "Shopee", color: "#EE4D2D" },
+  { key: "tokopedia" as const, label: "Tokopedia", color: "#03AC0E" },
+  { key: "lazada" as const, label: "Lazada", color: "#F02B7E" },
+  { key: "tiktokShop" as const, label: "TikTok Shop", color: "#010101" },
+];
 
+const ProductInfo = ({ product }: ProductInfoProps) => {
   const avgRating =
     product.reviews.reduce((sum, r) => sum + r.rating, 0) /
     product.reviews.length;
 
-  const handleWhatsAppOrder = () => {
-    const message = `Halo admin Dokter Tani, saya ingin memesan ${quantity}x ${product.name} (Rp ${formatPrice(product.price * quantity)})`;
-    const encoded = encodeURIComponent(message);
-    window.open(
-      `https://api.whatsapp.com/send?phone=6285122093761&text=${encoded}`,
-      "_blank",
-    );
-  };
+  const availableMarketplaces = marketplaces.filter(
+    (m) => product.ecommerceLinks?.[m.key],
+  );
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
@@ -82,37 +79,42 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           </div>
         </div>
 
-        <p className="text-2xl font-bold text-orangeDokTan md:text-3xl">
-          Rp {formatPrice(product.price)}
-        </p>
-
-        {/* Quantity & CTA */}
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="flex w-fit items-center overflow-hidden rounded-lg border-2 border-slate-200">
-            <button
-              onClick={() => setQuantity(Math.max(1, quantity - 1))}
-              className="px-4 py-2 text-lg font-bold text-slate-600 transition-colors hover:bg-slate-100"
-            >
-              −
-            </button>
-            <span className="min-w-[40px] border-x-2 border-slate-200 px-4 py-2 text-center font-semibold text-slate-800">
-              {quantity}
-            </span>
-            <button
-              onClick={() => setQuantity(quantity + 1)}
-              className="px-4 py-2 text-lg font-bold text-slate-600 transition-colors hover:bg-slate-100"
-            >
-              +
-            </button>
+        {/* Marketplace CTAs */}
+        {availableMarketplaces.length > 0 && (
+          <div className="space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+            <p className="text-sm font-semibold text-slate-600">
+              Beli di marketplace pilihan Anda:
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {availableMarketplaces.map((m) => (
+                <a
+                  key={m.key}
+                  href={product.ecommerceLinks[m.key]!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  style={{ backgroundColor: m.color }}
+                >
+                  {m.label}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              ))}
+            </div>
           </div>
-          <button
-            onClick={handleWhatsAppOrder}
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-orangeDokTan px-6 py-3 font-semibold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-orange-500 hover:shadow-xl sm:w-auto"
-          >
-            <Image src="/phone.svg" width={18} height={18} alt="order" />
-            Pesan via WhatsApp
-          </button>
-        </div>
+        )}
 
         {/* Meta Info */}
         <div className="space-y-1 border-t border-slate-200 pt-4 text-sm text-slate-500">
@@ -136,7 +138,9 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             {[...Array(5)].map((_, i) => (
               <Image
                 key={i}
-                src={i < Math.round(avgRating) ? "/star.svg" : "/star-empty.svg"}
+                src={
+                  i < Math.round(avgRating) ? "/star.svg" : "/star-empty.svg"
+                }
                 width={18}
                 height={18}
                 alt="star"
