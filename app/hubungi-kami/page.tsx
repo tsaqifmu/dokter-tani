@@ -32,7 +32,7 @@ function HeroSection() {
     <section className="relative w-full overflow-hidden bg-[#224A37] pt-[74px]">
       <div className="absolute inset-0 flex">
         {/* Dark Green Gradient Fade on the Left */}
-        <div className="z-10 w-full bg-gradient-to-r from-[#1b3d2d] from-[25%] via-[#1b3d2d]/60 via-[55%] to-transparent lg:w-full" />
+        <div className="z-10 w-full bg-gradient-to-r from-[#1b3d2d] from-[25%] via-[#1b3d2d]/60 via-[90%] to-transparent lg:w-full" />
         {/* Hero Image on the Right */}
         <div className="absolute inset-0 right-0 left-auto w-full lg:w-2/3">
           <Image
