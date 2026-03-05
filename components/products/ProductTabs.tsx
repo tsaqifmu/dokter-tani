@@ -29,7 +29,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
   return (
     <div className="mt-12">
       {/* Tab Headers */}
-      <div className="flex border-b border-slate-200">
+      <div className="flex overflow-x-auto whitespace-nowrap border-b border-slate-200 scrollbar-hide">
         {tabs.map((tab) => (
           <button
             key={tab.key}
@@ -56,16 +56,16 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
           <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
             <div className="space-y-6 lg:w-1/2">
               <div>
-                <h2 className="mb-3 text-2xl font-bold italic text-greenDokTan">
+                <h2 className="mb-3 text-xl font-bold italic text-greenDokTan md:text-2xl">
                   Tentang Produk
                 </h2>
-                <p className="leading-relaxed text-slate-600">
+                <p className="leading-relaxed text-sm text-slate-600 md:text-base">
                   {product.description}
                 </p>
               </div>
 
               <div>
-                <h3 className="mb-3 text-lg font-bold text-slate-800">
+                <h3 className="mb-3 text-base font-bold text-slate-800 md:text-lg">
                   Keunggulan {product.name}
                 </h3>
                 <ul className="space-y-3">
@@ -103,7 +103,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
         {activeTab === "cara-penggunaan" && (
           <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
             <div className="space-y-6 lg:w-1/2">
-              <h2 className="text-center text-2xl font-bold italic text-greenDokTan lg:text-left">
+              <h2 className="text-center text-xl font-bold italic text-greenDokTan md:text-2xl lg:text-left">
                 Cara Penggunaan
               </h2>
               <ol className="space-y-6">

@@ -39,7 +39,7 @@ export default function ProductDetailPage({ params }: PageProps) {
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero / Breadcrumb Section */}
-        <section className="relative overflow-hidden bg-greenDokTan py-8 md:py-12">
+        <section className="relative overflow-hidden bg-greenDokTan py-8 md:py-12 pt-[74px] md:pt-[90px]">
           {/* Subtle background pattern */}
           <div className="absolute inset-0 opacity-10">
             <Image
@@ -55,7 +55,7 @@ export default function ProductDetailPage({ params }: PageProps) {
             className={`${styles.paddingX} ${styles.flexCenter} relative z-10`}
           >
             <div className={styles.boxWidth}>
-              <nav className="mb-2 text-sm text-white/60">
+              <nav className="mb-2 flex flex-wrap items-center text-sm text-white/60">
                 <a
                   href="/"
                   className="transition-colors hover:text-white/90"

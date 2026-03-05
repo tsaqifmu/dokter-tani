@@ -14,7 +14,7 @@ export const metadata = {
 /* ─── Hero Section ────────────────────────────────────────────── */
 function HeroSection() {
   return (
-    <section className="relative min-h-[520px] overflow-hidden bg-greenDokTan pt-[65px] md:min-h-[560px]">
+    <section className="relative min-h-[520px] overflow-hidden bg-greenDokTan pt-[74px] md:min-h-[560px]">
       {/* Background Image */}
       <Image
         src="/tentang-hero-bg.png"

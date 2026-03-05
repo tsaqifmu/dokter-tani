@@ -44,7 +44,7 @@ const HeroImage = () => {
 
 const Hero = () => {
   return (
-    <section id="beranda" className={`${styles.flexCenter} relative pt-[65px]`}>
+    <section id="beranda" className={`${styles.flexCenter} relative pt-[74px]`}>
       <HeroContent />
       <HeroImage />
     </section>

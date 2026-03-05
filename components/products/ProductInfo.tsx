@@ -39,7 +39,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
 
       {/* Product Details */}
       <div className="space-y-5 lg:w-1/2">
-        <h1 className="text-3xl font-bold text-greenDokTan lg:text-4xl">
+        <h1 className="text-2xl font-bold text-greenDokTan md:text-3xl lg:text-4xl">
           {product.name}
         </h1>
 
@@ -82,20 +82,20 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           </div>
         </div>
 
-        <p className="text-3xl font-bold text-orangeDokTan">
+        <p className="text-2xl font-bold text-orangeDokTan md:text-3xl">
           Rp {formatPrice(product.price)}
         </p>
 
         {/* Quantity & CTA */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center overflow-hidden rounded-lg border-2 border-slate-200">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex w-fit items-center overflow-hidden rounded-lg border-2 border-slate-200">
             <button
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               className="px-4 py-2 text-lg font-bold text-slate-600 transition-colors hover:bg-slate-100"
             >
               −
             </button>
-            <span className="min-w-[40px] border-x-2 border-slate-200 px-4 py-2 text-center font-semibold">
+            <span className="min-w-[40px] border-x-2 border-slate-200 px-4 py-2 text-center font-semibold text-slate-800">
               {quantity}
             </span>
             <button
@@ -107,7 +107,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           </div>
           <button
             onClick={handleWhatsAppOrder}
-            className="flex items-center gap-2 rounded-lg bg-orangeDokTan px-6 py-3 font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-orange-500 hover:shadow-xl"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-orangeDokTan px-6 py-3 font-semibold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-orange-500 hover:shadow-xl sm:w-auto"
           >
             <Image src="/phone.svg" width={18} height={18} alt="order" />
             Pesan via WhatsApp

@@ -29,7 +29,7 @@ const WaveDivider = () => (
 /* ─── Hero Section ────────────────────────────────────────────── */
 function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#224A37] pt-[65px]">
+    <section className="relative w-full overflow-hidden bg-[#224A37] pt-[74px]">
       <div className="absolute inset-0 flex">
         {/* Dark Green Gradient Fade on the Left */}
         <div className="z-10 w-full bg-gradient-to-r from-[#1b3d2d] via-[#224A37]/90 to-transparent lg:w-3/5" />
@@ -215,7 +215,7 @@ function FormAndMapSection() {
             />
             <button
               type="submit"
-              className="rounded-md bg-orangeDokTan px-8 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-orange-600 sm:w-auto w-full mt-2"
+              className="rounded-md bg-orangeDokTan px-8 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-orange-600 hover:-translate-y-0.5 sm:w-auto w-full mt-2"
             >
               Kirim Pesan
             </button>

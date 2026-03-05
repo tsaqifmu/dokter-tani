@@ -17,7 +17,7 @@ export default function ProdukPage() {
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero Section */}
-        <section className="relative flex min-h-[340px] items-center justify-center overflow-hidden md:min-h-[420px]">
+        <section className="relative flex min-h-[340px] items-center justify-center overflow-hidden md:min-h-[420px] pt-[74px]">
           {/* Background Image */}
           <Image
             src="/products-hero-bg.png"
