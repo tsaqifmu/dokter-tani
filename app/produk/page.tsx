@@ -17,30 +17,32 @@ export default function ProdukPage() {
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero Section */}
-        <section className="relative flex min-h-[340px] items-center justify-center overflow-hidden md:min-h-[420px] pt-[74px]">
-          {/* Background Image */}
-          <Image
-            src="/products-hero-bg.png"
-            alt="Products hero background"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-greenDokTan/80 to-greenDokTan/60" />
-
-          {/* Content */}
-          <div className="relative z-10 flex flex-col items-center px-4 text-center">
-            <h1
-              className={`${styles.heading1} mb-4 text-white drop-shadow-lg`}
-            >
-              Produk <span className="italic text-orangeDokTan">Kami</span>
+        <section className={`${styles.flexCenter} relative pt-[74px]`}>
+          {/* Text Content */}
+          <div
+            className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
+          >
+            <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
+              Produk{" "}
+              <span className="italic text-orangeDokTan">Kami</span>
             </h1>
-            <p className="max-w-xl text-base text-white/80 md:text-lg">
+            <h3 className="text-base font-normal md:text-lg lg:text-2xl">
+              Solusi Pertanian Organik <br /> Berkualitas Tinggi
+            </h3>
+            <p className="w-2/3 text-sm text-slate-200 sm:w-1/2 md:w-96 lg:text-base">
               Solusi pertanian organik berkualitas tinggi untuk hasil panen yang
               lebih baik dan pertanian yang berkelanjutan.
             </p>
           </div>
+          {/* Background Image */}
+          <Image
+            src="/products-hero-bg.png"
+            alt="Produk Dokter Tani"
+            width={1920}
+            height={1080}
+            className="h-[600px] object-cover object-right brightness-50 md:brightness-100 lg:h-[700px] lg:w-full"
+            priority
+          />
         </section>
 
         {/* Products Grid */}

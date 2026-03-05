@@ -39,44 +39,44 @@ export default function ProductDetailPage({ params }: PageProps) {
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero / Breadcrumb Section */}
-        <section className="relative overflow-hidden bg-greenDokTan py-8 md:py-12 pt-[74px] md:pt-[90px]">
-          {/* Subtle background pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <Image
-              src="/product-detail-bg.png"
-              alt=""
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
+        <section className={`${styles.flexCenter} relative pt-[74px]`}>
+          {/* Text Content */}
           <div
-            className={`${styles.paddingX} ${styles.flexCenter} relative z-10`}
+            className={`${styles.paddingX} absolute top-1/2 z-10 flex w-full -translate-y-1/3 flex-col gap-1 space-y-1 text-white lg:gap-4 lg:space-y-0 xl:max-w-[1280px]`}
           >
-            <div className={styles.boxWidth}>
-              <nav className="mb-2 flex flex-wrap items-center text-sm text-white/60">
-                <a
-                  href="/"
-                  className="transition-colors hover:text-white/90"
-                >
-                  Beranda
-                </a>
-                <span className="mx-2">/</span>
-                <a
-                  href="/produk"
-                  className="transition-colors hover:text-white/90"
-                >
-                  Produk
-                </a>
-                <span className="mx-2">/</span>
-                <span className="text-white">{product.name}</span>
-              </nav>
-              <h1 className="text-2xl font-bold text-white md:text-3xl">
-                {product.name}
-              </h1>
-            </div>
+            <nav className="flex flex-wrap items-center text-sm text-white/60">
+              <a
+                href="/"
+                className="transition-colors hover:text-white/90"
+              >
+                Beranda
+              </a>
+              <span className="mx-2">/</span>
+              <a
+                href="/produk"
+                className="transition-colors hover:text-white/90"
+              >
+                Produk
+              </a>
+              <span className="mx-2">/</span>
+              <span className="text-white">{product.name}</span>
+            </nav>
+            <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
+              {product.name}
+            </h1>
+            <p className="w-2/3 text-sm text-slate-200 sm:w-1/2 md:w-96 lg:text-base">
+              {product.description.slice(0, 150)}
+            </p>
           </div>
+          {/* Background Image */}
+          <Image
+            src="/product-detail-bg.png"
+            alt={product.name}
+            width={1920}
+            height={1080}
+            className="h-[400px] object-cover object-right brightness-50 md:brightness-100 lg:h-[500px] lg:w-full"
+            priority
+          />
         </section>
 
         {/* Product Detail */}
