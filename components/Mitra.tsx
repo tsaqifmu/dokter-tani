@@ -1,7 +1,5 @@
 import React from "react";
-import Image from "next/image";
 
-import { mitra } from "@/constant";
 import { styles } from "@/constant/style";
 
 // Component for the paragraph content of the Mitra section
@@ -23,30 +21,6 @@ const MitraContent = () => {
   );
 };
 
-// Component for the logos of the partners in the Mitra section
-const MitraLogos = () => {
-  return (
-    <div className="flex w-full items-center md:w-1/2 md:justify-end">
-      <div className="mt-10 flex max-w-[450px] flex-wrap justify-end gap-4 md:w-full md:max-w-none lg:mt-0">
-        {mitra.map((item) => (
-          <div
-            key={item.id}
-            className="w-1/3 flex-auto rounded-lg bg-white px-4 py-2 transition-all hover:cursor-pointer hover:shadow-lg"
-          >
-            <Image
-              src={item.image}
-              alt=""
-              width={500}
-              height={500}
-              className="transition-all hover:grayscale-0 lg:w-full lg:grayscale"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const Mitra = () => {
   return (
     <section id="mitra" className={`${styles.flexCenter} `}>
@@ -54,7 +28,6 @@ const Mitra = () => {
         className={`${styles.boxWidthNavFoot} ${styles.paddingX} ${styles.paddingY} h-full md:flex md:space-x-10`}
       >
         <MitraContent />
-        <MitraLogos />
       </div>
     </section>
   );
