@@ -35,7 +35,7 @@ const MitraLogos = () => {
           >
             <Image
               src={item.image}
-              alt={`Logo ${item.id}`}
+              alt=""
               width={500}
               height={500}
               className="transition-all hover:grayscale-0 lg:w-full lg:grayscale"

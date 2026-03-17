@@ -52,7 +52,7 @@ const FooterLogo = () => {
           src={logoFooter}
           width={300}
           height={300}
-          alt="logo dokter tani"
+          alt=""
           className="w-full"
         />
         <p className={`mt-3 text-sm text-slate-300 lg:text-base`}>

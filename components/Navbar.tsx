@@ -33,7 +33,7 @@ const Logo = () => (
       src={logoDokTanNavbar}
       width={212}
       height={50}
-      alt="logo dokter tani"
+      alt=""
     />
   </Link>
 );
