@@ -29,10 +29,6 @@ export const navLinks = [
     title: "Hubungi",
     link: "/hubungi-kami",
   },
-  {
-    id: "tim",
-    title: "Tim",
-  },
 ];
 export const mitra = [
   {
