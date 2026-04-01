@@ -24,8 +24,8 @@ const Hero = () => {
       <div className={`${styles.paddingX} relative z-10 flex min-h-[600px] items-center lg:min-h-[700px]`}>
         <div className="flex max-w-[580px] flex-col gap-4 text-white">
           <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
-            Selamat Datang di <br />
-            Dokter Tani
+            Selamat Datang <br />
+            di Dokter Tani
           </h1>
           <h3 className="text-base font-normal md:text-lg lg:text-2xl">
             Klinik Pertanian Terpercaya <br /> untuk Kesehatan Tanaman Anda
