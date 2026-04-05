@@ -1,14 +1,28 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/products/ProductCard";
-import { products } from "@/constant/products";
+import { products, getAllCategories } from "@/constant/products";
 import { styles } from "@/constant/style";
 
-export const metadata = {
-  title: "Produk Kami - Dokter Tani",
+export const metadata: Metadata = {
+  title: "Katalog 32+ Produk Pertanian Organik - Dokter Tani",
   description:
-    "Produk pertanian organik berkualitas tinggi dari Dokter Tani. Pupuk organik, fungisidal hayati, dan pestisidal hayati untuk pertanian berkelanjutan.",
+    "Jelajahi 32+ produk pertanian organik Dokter Tani: POC, PHC, Fungisida Hayati, Booster Buah, Pembenah Tanah, dan Paket Bundling. Solusi lengkap untuk panen melimpah.",
+  keywords: "produk dokter tani, pupuk organik, POC, PHC, fungisida hayati, pestisida organik, booster buah, pertanian organik",
+  openGraph: {
+    title: "Katalog Produk Pertanian Organik - Dokter Tani",
+    description:
+      "32+ produk pertanian organik berkualitas tinggi untuk hasil panen lebih baik.",
+    url: "https://www.doktertani.co.id/produk",
+    siteName: "Dokter Tani",
+    locale: "id_ID",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://www.doktertani.co.id/produk",
+  },
 };
 
 export default function ProdukPage() {

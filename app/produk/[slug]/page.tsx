@@ -6,6 +6,7 @@ import ProductInfo from "@/components/products/ProductInfo";
 import ProductTabs from "@/components/products/ProductTabs";
 import { products, getProductBySlug } from "@/constant/products";
 import { styles } from "@/constant/style";
+import type { Metadata } from "next";
 
 interface PageProps {
   params: { slug: string };
@@ -17,13 +18,41 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: PageProps) {
+export function generateMetadata({ params }: PageProps): Metadata {
   const product = getProductBySlug(params.slug);
   if (!product) return { title: "Produk Tidak Ditemukan - Dokter Tani" };
 
+  const url = `https://www.doktertani.co.id/produk/${product.slug}`;
+
   return {
-    title: `${product.name} - Dokter Tani`,
-    description: product.description.slice(0, 155),
+    title: product.metaTitle,
+    description: product.metaDescription,
+    keywords: product.tags.join(", "),
+    openGraph: {
+      title: product.metaTitle,
+      description: product.metaDescription,
+      url,
+      siteName: "Dokter Tani",
+      images: [
+        {
+          url: `https://www.doktertani.co.id${product.image}`,
+          width: 800,
+          height: 600,
+          alt: product.name,
+        },
+      ],
+      locale: "id_ID",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.metaTitle,
+      description: product.metaDescription,
+      images: [`https://www.doktertani.co.id${product.image}`],
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
@@ -34,8 +63,57 @@ export default function ProductDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const avgRating =
+    product.reviews.reduce((sum, r) => sum + r.rating, 0) /
+    product.reviews.length;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.metaDescription,
+    image: product.images.map((img) => `https://www.doktertani.co.id${img}`),
+    brand: {
+      "@type": "Brand",
+      name: "Dokter Tani",
+    },
+    category: product.category,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgRating.toFixed(1),
+      reviewCount: product.reviews.length,
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: product.reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      datePublished: r.date,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.rating,
+        bestRating: "5",
+      },
+      reviewBody: r.comment,
+    })),
+    offers: {
+      "@type": "Offer",
+      availability: product.stock === "Tersedia"
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      seller: {
+        "@type": "Organization",
+        name: "Dokter Tani",
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <NavBar />
       <main className="bg-slate-100 text-slate-800">
         {/* Hero / Breadcrumb Section */}
@@ -68,7 +146,7 @@ export default function ProductDetailPage({ params }: PageProps) {
                 {product.name}
               </h1>
               <p className="text-sm text-slate-200 md:max-w-sm lg:text-base">
-                {product.description.slice(0, 150)}
+                {product.hook}
               </p>
             </div>
           </div>
